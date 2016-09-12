@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#imageDiv_image").hover(function () {
+                $("#imageDiv_image").animate({width:'250px',height:"250px",top:"-=25",left:"-=25",opacity:"0.5"},100);
+            },function () {
+                $("#imageDiv_image").animate({width:'200px',height:"200px",top:"+=25",left:"+=25",opacity:"1.0"},100);
+            })
+        })
+    </script>
+    <style>
+        .backgroundDiv {
+            background-color: #f1f1f1;
+            width: 900px;
+            margin: auto;
+        }
+        .imageDiv{
+            width: 200px;
+            height: 200px;
+            display: block;
+            overflow: hidden;
+
+        }
+        .imageDiv:hover{
+            box-shadow: 3px 3px 10px;
+        }
+       #imageDiv_image {
+           position: relative;
+       }
+
+    </style>
+</head>
+<body>
+<div class="backgroundDiv">
+    backgroundDiv
+    <div class="imageDiv">
+        <img id="imageDiv_image" src="b0d76a22dac42e7e0316607e36b88770.jpg" width="200px" height="200px">
+    </div>
+
+</div>
+</body>
+</html>
