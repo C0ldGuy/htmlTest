@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jinguang_blog</title>
+    <link rel="stylesheet" href="bootstrap-3.3.0/dist/css/bootstrap.min.css">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.content_basic_div').hover(function () {
+
+            })
+        })
+    </script>
+    <style>
+        #container{
+            width:100%;
+            height: auto;
+        }
+        #iconBackground{
+            width:100%;
+            height: 600px;
+            background-color: #00AA88;
+        }
+        #iconBackgroundImage{
+
+            z-index: -1;
+        }
+
+        #iconDiv{
+            position: relative;
+            width: 200px;
+            height: 300px;
+            background-color: transparent;
+            margin: 0 auto;
+            top: -400px;
+        }
+        #icon{
+            width: 200px;
+            height: 200px;
+            background-color: transparent;
+            position: relative;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-radius: 100px;
+            -webkit-box-shadow: 10px;
+            -moz-box-shadow: 10px;
+            box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.53);
+            overflow: hidden;
+            border: 2px solid white;
+        }
+        #iconName{
+            font:italic normal bold 50px "Times New Roman",Georgia,Serif;
+            color: white;
+            text-align: center;
+            text-shadow: 1px 1px 0px gray;
+            margin-top: 20px;
+        }
+        #content{
+            width: 100%;
+            height:auto;
+            background-color: #0D3349;
+        }
+        #content_basic{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+            background-color: #00AA88;
+        }
+        .content_basic_div{
+            position: relative;
+            width: 350px;
+            height: 400px;
+            overflow: hidden;
+            margin: 15px;
+        }
+        .content_basic_div_title{/*这个元素要覆盖在兄弟元素上*/
+            background-color: #0f0f0f;
+            position: absolute;/*它的父元素要相对定位,这个元素才能以父元素为参照进行绝对定位,才能覆盖在兄弟元素上*/
+            top: -50px;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            color: white;
+            opacity: 0.7;
+            text-align: center;
+            font: normal normal bold 40px Arial,Helvetica,sans-serif;
+            transition-duration: 0.5s;
+            transition-property: top;
+        }
+        .content_basic_div:hover{
+            transition-duration: 0.5s;
+            box-shadow:2px 2px 10px 0px black;
+        }
+        .content_basic_div:hover .content_basic_div_title{
+            top:0px;
+        }
+        .content_basic_image{
+            z-index: -1;
+            transition-duration: 0.5s;
+        }
+        .content_basic_image:hover{
+            transform: scale(2.0);
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="iconBackground">
+        <img id="iconBackgroundImage" src="b0d76a22dac42e7e0316607e36b88770.jpg" width=100% height=100% alt="iconBackground">
+        <div id="iconDiv">
+            <img id="icon" src="IMG_3303.JPG" alt="icon" width=100% height=100%>
+            <p id="iconName">Jinguang</p>
+        </div>
+    </div>
+    <div id="content">
+        <div id="content_basic">
+            <div class="content_basic_div">
+                <img class="content_basic_image" src="html.png" alt="html.jpg" width=100% height=100%>
+                <div class="content_basic_div_title">HTML</div>
+            </div>
+            <div class="content_basic_div">
+                <img class="content_basic_image" src="css.jpg" alt="html.jpg" width=100% height=100%>
+                <div class="content_basic_div_title">CSS</div>
+            </div>
+            <div class="content_basic_div">
+                <img class="content_basic_image" src="javascript.jpg" alt="html.jpg" width=100% height=100%>
+                <div class="content_basic_div_title">JavaScript</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

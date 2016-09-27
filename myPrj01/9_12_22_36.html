@@ -3,8 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <title>test3</title>
+   <style>
+
+      /* .div3 {
+           width:200px;
+           margin:0 auto;
+           background-color: #00AA88;
+       }
+
+       .div1 {
+           width:500px ;
+           height:300px;//高度可以不设
+           margin: -150px 0 0 -250px;
+           position:relative;
+            background-color:red;
+           left:50%;
+           top:50%;
+       }
+
+       .div2 {
+           position: absolute;
+           width: 1200px;
+           height: 200px;
+           background-color: blue; ;
+           margin: 0 auto;
+           top: 0;
+           left: 0;
+           bottom: 0;
+           right: 0;
+       }
+*/
+       #wrap{
+           width:100%;
+           background-color: red;
+           height:auto;
+           position: relative;
+           left: 0px;
+           top: 0px;
+           margin: 0px 0px 0px 0px;
+       }
+       #column1{
+           position:absolute;
+           top:20px;
+           left:0px;
+           width:300px;
+           background-color: green;
+       }
+       #column2{
+           position:relative;
+           /*   left: 100px;
+              top: 100px;*/
+         margin: 0px 0px 0px 20px;/*将会影响到父元素的margin-top*/
+      width:470px;
+      background-color: #FFFF66;
+  }
+
+
+</style>
 </head>
-<body>
+<body style="border:4px blue dotted">
+   <!-- <div class="div2">
+        div2
+    </div>
+    <div class="div1">
+        div1
+    </div>
+    <div class="div3">
+        div3
+    </div>-->
+
+    <div id="wrap">
+        <div id="column1">这里是第一列</div>
+        <div id="column2">这里是第二列</div>
+    </div>
+
+
 
 </body>
 </html>
