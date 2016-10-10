@@ -7,8 +7,45 @@
     <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('.content_basic_div').hover(function () {
+            $('#content_basic_div_HTML').click(function () {
+                $('#content_basic_div_HTML').css({'opacity':0.2});
 
+                $('#content_basic_div_CSS').css({'opacity':1.0});
+
+
+                $('#content_basic_div_JAVASCRIPT').css({'opacity':1.0});
+
+                $('#content_basic_HTML').fadeIn(1);
+                $('#content_basic_JAVASCRIPT').fadeOut(1);
+                $('#content_basic_CSS').fadeOut(1);
+            })
+            $('#content_basic_div_JAVASCRIPT').click(function () {
+
+                $('#content_basic_div_HTML').css({'opacity':1.0});
+
+
+
+                $('#content_basic_div_CSS').css({'opacity':1.0});
+
+
+                $('#content_basic_div_JAVASCRIPT').css({'opacity':0.2});
+                $('#content_basic_JAVASCRIPT').fadeIn(1);
+                $('#content_basic_HTML').fadeOut(1);
+                $('#content_basic_CSS').fadeOut(1);
+            })
+            $('#content_basic_div_CSS').click(function () {
+
+                $('#content_basic_div_HTML').css({'opacity':1.0});
+
+
+                $('#content_basic_div_CSS').css({'opacity':0.2});
+
+
+                $('#content_basic_div_JAVASCRIPT').css({'opacity':1.0});
+
+                $('#content_basic_CSS').fadeIn(1);
+                $('#content_basic_JAVASCRIPT').fadeOut(1);
+                $('#content_basic_HTML').fadeOut(1);
             })
         })
     </script>
@@ -95,6 +132,7 @@
             transition-duration: 0.5s;
             box-shadow:2px 2px 10px 0px black;
         }
+
         .content_basic_div:hover .content_basic_div_title{
             top:0px;
         }
@@ -106,6 +144,24 @@
             transform: scale(2.0);
             opacity: 0.4;
         }
+        .threeParts_div{
+            display: none;
+            width: 100%;
+            height: auto;
+            background-color: whitesmoke;
+            box-shadow: inset 0px 2px 4px black;
+        }
+        .threeParts_div h2{
+            margin-top: 0px;
+            text-align: center;
+        }
+        .threeParts_div p{
+            text-align: center;
+            font-size: large;
+        }
+        #content_basic_HTML{}
+        #content_basic_CSS{}
+        #content_basic_JAVASCRIPT{}
     </style>
 </head>
 <body>
@@ -119,18 +175,40 @@
     </div>
     <div id="content">
         <div id="content_basic">
-            <div class="content_basic_div">
+            <div class="content_basic_div" id="content_basic_div_HTML">
                 <img class="content_basic_image" src="html.png" alt="html.jpg" width=100% height=100%>
                 <div class="content_basic_div_title">HTML</div>
             </div>
-            <div class="content_basic_div">
+            <div class="content_basic_div" id="content_basic_div_CSS">
                 <img class="content_basic_image" src="css.jpg" alt="html.jpg" width=100% height=100%>
                 <div class="content_basic_div_title">CSS</div>
             </div>
-            <div class="content_basic_div">
+            <div class="content_basic_div" id="content_basic_div_JAVASCRIPT">
                 <img class="content_basic_image" src="javascript.jpg" alt="html.jpg" width=100% height=100%>
                 <div class="content_basic_div_title">JavaScript</div>
             </div>
+
+        </div>
+        <div class="threeParts_div" id="content_basic_HTML">
+            <h2>HTML</h2>
+            <p>
+                超级文本标记语言是标准通用标记语言下的一个应用，也是一种规范，一种标准，它通过标记符号来标记要显示的网页中的各个部分。网页文件本身是一种文本文件，通过在文本文件中添加标记符，可以告诉浏览器如何显示其中的内容（如：文字如何处理，画面如何安排，图片如何显示等）。浏览器按顺序阅读网页文件，然后根据标记符解释和显示其标记的内容，对书写出错的标记将不指出其错误，且不停止其解释执行过程，编制者只能通过显示效果来分析出错原因和出错部位。但需要注意的是，对于不同的浏览器，对同一标记符可能会有不完全相同的解释，因而可能会有不同的显示效果。[2]
+            </p>
+        </div>
+        <div class="threeParts_div" id="content_basic_CSS">
+            <h2>CSS</h2>
+            <p>
+                层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。
+                CSS目前最新版本为CSS3，是能够真正做到网页表现与内容分离的一种样式设计语言。相对于传统HTML的表现而言，CSS能够对网页中的对象的位置排版进行像素级的精确控制，支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力，并能够进行初步交互设计，是目前基于文本展示最优秀的表现设计语言。CSS能够根据不同使用者的理解能力，简化或者优化写法，针对各类人群，有较强的易读性。
+            </p>
+        </div>
+        <div class="threeParts_div" id="content_basic_JAVASCRIPT">
+            <h2>JAVASCRIPT</h2>
+            <p>
+                JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。
+                在1995年时，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。因为Netscape与Sun合作，Netscape管理层希望它外观看起来像Java，因此取名为JavaScript。但实际上它的语法风格与Self及Scheme较为接近。[1]
+                为了取得技术优势，微软推出了JScript，CEnvi推出ScriptEase，与JavaScript同样可在浏览器上运行。为了统一规格，因为JavaScript兼容于ECMA标准，因此也称为ECMAScript。
+            </p>
         </div>
     </div>
 </div>
